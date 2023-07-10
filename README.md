@@ -12,7 +12,7 @@ npm install -D tailwindcss-radix-scale
 
 ## Usage
 
-Import the colours you'd like to use above where you import Tailwind.
+Import the colours you'd like to use above where you import Tailwind in your CSS entrypoint.
 
 ```css
 @import '@radix-ui/colors/blue.css';
