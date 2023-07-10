@@ -1,0 +1,32 @@
+{
+  "name": "tailwindcss-radix-scale",
+  "license": "MIT",
+  "author": "Evan Fleet",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/tailwindcss-radix-scale.umd.cjs",
+  "module": "./dist/tailwindcss-radix-scale.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tailwindcss-radix-scale.js",
+      "require": "./dist/tailwindcss-radix-scale.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0",
+    "vite-plugin-dts": "^3.2.0"
+  },
+  "peerDependencies": {
+    "@radix-ui/colors": "^1.0.0",
+    "tailwindcss": "^3.0.0"
+  }
+}
