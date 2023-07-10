@@ -1,5 +1,7 @@
 # TailwindCSS Radix Scale
 
+[![MIT License](https://img.shields.io/github/license/evfleet/tailwindcss-radix-scale)](https://github.com/evfleet/tailwindcss-radix-scale/blob/main/LICENSE)
+
 A package to simplify using [Radix Colors](https://www.radix-ui.com/colors) when using [Tailwind](https://tailwindcss.com/).
 
 ## Installation
