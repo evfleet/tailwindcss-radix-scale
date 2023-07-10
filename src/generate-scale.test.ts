@@ -7,4 +7,20 @@ describe("generateScale", () => {
 
     expect(Object.keys(scale).length).toBe(24);
   });
+
+  it("should return a scale with the correct values", () => {
+    const scale = generateScale("red");
+
+    const validScale = Object.entries(scale).every(
+      ([key, value]) => value === `var(--red-${key})`
+    );
+
+    expect(validScale).toBe(true);
+  });
+
+  it("should throw an error if the color is not valid", () => {
+    expect(() => generateScale("blurple" as any)).toThrowError(
+      '"blurple" is not a valid Radix color'
+    );
+  });
 });
