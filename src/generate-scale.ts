@@ -63,7 +63,11 @@ export type RadixScale<T extends string> = {
 // Inspired from https://fynn.at/shorts/2023-03-19-how-to-use-radix-colors-with-tailwind-css
 // Fixed breaking changes from 1.0.0 release of radix-colors
 export function generateScale<T extends RadixColor>(color: T): RadixScale<T> {
-  let scale = Array.from({ length: 12 }, (_, i) => {
+  if (!availableColors.includes(color)) {
+    throw new Error(`"${color}" is not a valid Radix color`);
+  }
+
+  const scale = Array.from({ length: 12 }, (_, i) => {
     let id = i + 1;
     return [
       [id, `var(--${color}-${id})`],
