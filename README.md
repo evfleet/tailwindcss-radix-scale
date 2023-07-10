@@ -26,13 +26,13 @@ Import the colours you'd like to use above where you import Tailwind in your CSS
 Then use the library in your Tailwind config to generate the classes you'd like to use.
 
 ```js
-import { generateRadixScale } from "tailwindcss-radix-scale";
+import { generateScale } from "tailwindcss-radix-scale";
 
 module.exports = {
   content: [],
   theme: {
     colors: {
-      blue: generateRadixScale("blue"),
+      blue: generateScale("blue"),
     },
   },
   plugins: [],
